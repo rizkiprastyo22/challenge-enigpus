@@ -1,5 +1,6 @@
 import Book from "./model/Book.js"
 import add from "./service/add.js"
+import deleteById from "./service/deleteById.js"
 import getAll from "./service/getAll.js"
 import searchByTitle from "./service/searchByTitle.js"
 
@@ -20,3 +21,7 @@ console.log('DAFTAR BUKU SAAT INI \n--------\n', getAll(daftarBuku))
 // searchByTitle
 let findBook = searchByTitle(daftarBuku, 'Doa Seorang Supir')
 console.log('BUKU DITEMUKAN \n--------\n', findBook)
+
+// deleteById
+deleteById(daftarBuku, 2)
+console.log('BUKU BERHASIL TERHAPUS \n--------\n', getAll(daftarBuku))
